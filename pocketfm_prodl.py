@@ -35,7 +35,7 @@ class PocketFMProfessional:
         print("="*80)
         
         # ===== STEP 1: LOAD VALID TOKEN (SABSE IMPORTANT) =====
-        self.load_token()
+        self.load_token()  # Token yahan load hoga
         
         # ===== CONFIGURATION =====
         self.session = requests.Session()
@@ -90,41 +90,25 @@ class PocketFMProfessional:
     
     def load_token(self):
         """
-        sessions.json se valid token load karo
-        Developer ki tarah - automatically!
+        Manually token set karo - APNA TOKEN YAHAN DAALO
         """
-        self.token = None
-        self.uid = None
-        self.token_valid = False
+        # ===== REPLACE WITH YOUR VALID TOKEN AND UID =====
+        self.token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYXRlZ29yeSI6ImFjY2VzcyIsImRldmljZV9pZCI6IjMxYjNiYzYzZDg3ZjExMTQiLCJleHBpcnkiOjE3NzIyMDA5MzIsImlhdCI6MTc3MjAyODEzMiwicGxhdGZvcm0iOiJhbmRyb2lkIiwicm9sZSI6Ikxpc3RlbmVyIiwidGVuYW50IjoicG9ja2V0X2ZtIiwidWlkIjoiYTU5MjQ0ZGE0MjAyM2M0ZjBkMTJmODcyMTUyZDk3ZDlhMThmZjc4YyIsInZlcnNpb24iOiJ2MiJ9.VemNDQOTXgTDkWvS_cMX8TQB6wWCvcoYDMMXDA9Wsh4"
+        self.uid = "a59244da42023c4f0d12f872152d97d9a18ff78c"
+        self.token_valid = True
         
-        try:
-            if os.path.exists('sessions.json'):
-                with open('sessions.json', 'r') as f:
-                    sessions = json.load(f)
-                    for phone, data in sessions.items():
-                        self.uid = data.get('uid')
-                        self.token = data.get('token')
-                        if self.token:
-                            self.token_valid = True
-                            print(f"✅ Token loaded for {phone}")
-                            break
-            
-            if not self.token_valid:
-                print("⚠️ No valid token found! Please login via Telegram bot first.")
-                print("📱 /login +91XXXXXXXXXX")
-                print("🔢 /verify 123456")
-            
-            self.headers = {
-                'Authorization': f'Bearer {self.token}' if self.token else '',
-                'X-User-Id': self.uid or '',
-                'User-Agent': 'okhttp/4.12.0',
-                'Device-Id': '31b3bc63d87f1114',
-                'Platform': 'android',
-                'Accept': 'application/json',
-            }
-        except Exception as e:
-            print(f"❌ Token load error: {e}")
-            self.headers = {}
+        print(f"✅ Token loaded manually!")
+        print(f"🆔 UID: {self.uid[:20]}...")
+        print(f"🔑 Token: {self.token[:30]}...")
+        
+        self.headers = {
+            'Authorization': f'Bearer {self.token}',
+            'X-User-Id': self.uid,
+            'User-Agent': 'okhttp/4.12.0',
+            'Device-Id': '31b3bc63d87f1114',
+            'Platform': 'android',
+            'Accept': 'application/json',
+        }
     
     def load_state(self):
         """Previous state load karo"""
