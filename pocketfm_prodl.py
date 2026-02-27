@@ -93,7 +93,7 @@ class PocketFMProfessional:
         Manually token set karo - APNA TOKEN YAHAN DAALO
         """
         # ===== REPLACE WITH YOUR VALID TOKEN AND UID =====
-        self.token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYXRlZ29yeSI6ImFjY2VzcyIsImRldmljZV9pZCI6IjMxYjNiYzYzZDg3ZjExMTQiLCJleHBpcnkiOjE3NzIyMDA5MzIsImlhdCI6MTc3MjAyODEzMiwicGxhdGZvcm0iOiJhbmRyb2lkIiwicm9sZSI6Ikxpc3RlbmVyIiwidGVuYW50IjoicG9ja2V0X2ZtIiwidWlkIjoiYTU5MjQ0ZGE0MjAyM2M0ZjBkMTJmODcyMTUyZDk3ZDlhMThmZjc4YyIsInZlcnNpb24iOiJ2MiJ9.VemNDQOTXgTDkWvS_cMX8TQB6wWCvcoYDMMXDA9Wsh4"
+        self.token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjYXRlZ29yeSI6ImFjY2VzcyIsImRldmljZV9pZCI6IjMxYjNiYzYzZDg3ZjExMTQiLCJleHBpcnkiOjE3NzIzNDE0NjEsImlhdCI6MTc3MjE2ODY2MSwicGxhdGZvcm0iOiJhbmRyb2lkIiwicm9sZSI6Ikxpc3RlbmVyIiwidGVuYW50IjoicG9ja2V0X2ZtIiwidWlkIjoiYTU5MjQ0ZGE0MjAyM2M0ZjBkMTJmODcyMTUyZDk3ZDlhMThmZjc4YyIsInZlcnNpb24iOiJ2MiJ9.CyxQ8zGqyJppIV3QydXp_BCfS6WsN0eSsSjaCHDtaR4"
         self.uid = "a59244da42023c4f0d12f872152d97d9a18ff78c"
         self.token_valid = True
         
